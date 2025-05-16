@@ -1,16 +1,15 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
 
-apply(plugin = "com.google.gms.google-services") // Apply Firebase plugin here
+// ❌ Removed: apply(plugin = "com.google.gms.google-services")
 
 android {
     namespace = "com.example.attendanceapp_cloud"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973" // Explicitly setting to avoid future NDK issues
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -41,6 +40,5 @@ flutter {
 }
 
 dependencies {
-    implementation(platform("com.google.firebase:firebase-bom:32.1.1")) // Firebase BOM
-    implementation("com.google.firebase:firebase-analytics-ktx") // Firebase Analytics, add others if needed
+    // ❌ Removed Firebase dependencies
 }

@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.attendify">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
         android:label="attendanceapp_cloud"
         android:name="${applicationName}"
